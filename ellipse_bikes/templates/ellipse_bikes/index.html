@@ -1,0 +1,11 @@
+{% extends "ellipse_bikes/base.html" %}
+
+{% block content_title %}
+{% endblock %}
+
+{% block content_body %}
+    <h1 class="text-center mx-5">{{ 'Welcome to ellipse bikes'|title }}</h1>
+    <div class="row justify-content-center">
+        <a class="col-4 text-center my-5" href="{% url 'ellipse_bikes:contracts' %}">{{ "We have the bikes' stations available"|title }}</a>
+    </div>
+{% endblock %}

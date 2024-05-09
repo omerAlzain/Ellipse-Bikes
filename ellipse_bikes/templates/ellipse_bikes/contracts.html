@@ -1,0 +1,15 @@
+{% extends "ellipse_bikes/base.html" %}
+
+{% block content_title %}
+    <h4>Contract List</h4>
+{% endblock %}
+
+{% block content_body %}
+    {% for contract in contract_list %}
+        <div class="col-12 px-5">
+            <a href="{% url 'ellipse_bikes:contract_stations' contract.id %}"><h4> {{ contract.name | upper}}</h4></a>
+            <p>Commercial Name: {{ contract.commercial_name }}</p>
+            <p>Country Code: {{ contract.country_code }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

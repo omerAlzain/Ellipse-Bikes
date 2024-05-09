@@ -1,0 +1,62 @@
+{% extends "ellipse_bikes/base.html" %}
+
+{% block extrahead %}
+    {{ block.super }}
+    {{ form.media }}
+{% endblock %}
+
+{% block content_title %}
+    <h2> {{ station.name }}</h2>
+{% endblock %}
+
+{% block content_body %}
+    <h3 class="text-primary">{{ 'Static Data'|upper }}</h3>
+    <table>
+        <tr><th>{{ form.number.label }}:</th><td>{{ form.number }}</td></tr>
+        <tr><th>{{ form.name.label }}:</th><td>{{ form.name }}</td></tr>
+        <tr><th>{{ form.contract.label }}:</th><td>{{ form.contract }}</td></tr>
+        <tr><th>{{ form.address.label }}:</th><td>{{ form.address }}</td></tr>
+        <tr><th>{{ form.position.label }}:</th><td>{{ form.position }}</td></tr>
+        <tr><th>{{ form.shape.label }}:</th><td>{{ form.shape }}</td></tr>
+        <tr><th>{{ form.overflow.label }}:</th><td>{{ form.overflow }}</td></tr>
+        <tr><th>{{ form.banking.label }}:</th><td>{{ form.banking }}</td></tr>
+        <tr><th>{{ form.bonus.label }}:</th><td>{{ form.bonus }}</td></tr>
+    </table>
+    <h3 class="text-primary">{{ 'Dynamic Data'|upper }}</h3>
+    <table>
+        <tr><th>{{ form.status.label }}:</th><td>{{ form.status }}</td></tr>
+        <tr><th>{{ form.connected.label }}:</th><td>{{ form.connected }}</td></tr>
+        <tr><th>{{ form.last_update.label }}:</th><td>{{ form.last_update }}</td></tr>
+        <tr><th>{{ form.last_schedule_run.label }}:</th><td>{{ form.last_schedule_run }}</td></tr>
+    </table>
+    <h6 class="text-primary">{{ 'Total Availabilities'|upper }}</h6>
+    <table>
+        <tr><th>{{ form.total_available_bikes.label }}:</th><td>{{ form.total_available_bikes }}</td></tr>
+        <tr><th>{{ form.total_available_stands.label }}:</th><td>{{ form.total_available_stands }}</td></tr>
+        <tr><th>{{ form.total_available_mechanical_bikes.label }}:</th><td>{{ form.total_available_mechanical_bikes }}</td></tr>
+        <tr><th>{{ form.total_available_electrical_bikes.label }}:</th><td>{{ form.total_available_electrical_bikes }}</td></tr>
+        <tr><th>{{ form.total_available_electrical_internal_battery_bikes.label }}:</th><td>{{ form.total_available_electrical_internal_battery_bikes }}</td></tr>
+        <tr><th>{{ form.total_available_electrical_removable_battery_bikes.label }}:</th><td>{{ form.total_available_electrical_removable_battery_bikes }}</td></tr>
+        <tr><th>{{ form.total_capacity.label }}:</th><td>{{ form.total_capacity }}</td></tr>
+    </table>
+    <h6 class="text-primary">{{ 'Main Availabilities'|upper }}</h6>
+    <table>
+        <tr><th>{{ form.main_available_bikes.label }}:</th><td>{{ form.main_available_bikes }}</td></tr>
+        <tr><th>{{ form.main_available_stands.label }}:</th><td>{{ form.main_available_stands }}</td></tr>
+        <tr><th>{{ form.main_available_mechanical_bikes.label }}:</th><td>{{ form.main_available_mechanical_bikes }}</td></tr>
+        <tr><th>{{ form.main_available_electrical_bikes.label }}:</th><td>{{ form.main_available_electrical_bikes }}</td></tr>
+        <tr><th>{{ form.main_available_electrical_internal_battery_bikes.label }}:</th><td>{{ form.main_available_electrical_internal_battery_bikes }}</td></tr>
+        <tr><th>{{ form.main_available_electrical_removable_battery_bikes.label }}:</th><td>{{ form.main_available_electrical_removable_battery_bikes }}</td></tr>
+        <tr><th>{{ form.main_capacity.label }}:</th><td>{{ form.main_capacity }}</td></tr>
+    </table>
+    <h6 class="text-primary">{{ 'Overflow Availabilities'|upper }}</h6>
+    <table>
+        <tr><th>{{ form.overflow_available_bikes.label }}:</th><td>{{ form.overflow_available_bikes }}</td></tr>
+        <tr><th>{{ form.overflow_available_stands.label }}:</th><td>{{ form.overflow_available_stands }}</td></tr>
+        <tr><th>{{ form.overflow_available_mechanical_bikes.label }}:</th><td>{{ form.overflow_available_mechanical_bikes }}</td></tr>
+        <tr><th>{{ form.overflow_available_electrical_bikes.label }}:</th><td>{{ form.overflow_available_electrical_bikes }}</td></tr>
+        <tr><th>{{ form.overflow_available_electrical_internal_battery_bikes.label }}:</th><td>{{ form.overflow_available_electrical_internal_battery_bikes }}</td></tr>
+        <tr><th>{{ form.overflow_available_electrical_removable_battery_bikes.label }}:</th><td>{{ form.overflow_available_electrical_removable_battery_bikes }}</td></tr>
+        <tr><th>{{ form.overflow_capacity.label }}:</th><td>{{ form.overflow_capacity }}</td></tr>
+    </table>
+{% endblock %}
