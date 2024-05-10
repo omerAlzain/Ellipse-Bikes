@@ -70,3 +70,44 @@ Remarquez également que les fichiers de la base de données seront stockés dan
 donc si vous voulez **supprimer la base de données**, vous devez supprimer le conteneur Docker (Si vous avez Docker Desktop,
 il est facile de trouver le conteneur que vous voulez supprimer. Le nôtre est "django_project") puis supprimer le répertoire *(.postgres_data/db)* .
 
+
+## Structure du Projet
+
+### Fichiers Principaux du Projet Django
+- `django_project/`
+  - `__init__.py`: Fichier d'initialisation Python.
+  - `asgi.py`: Point d'entrée pour les serveurs ASGI (Asynchronous Server Gateway Interface).
+  - `settings.py`: Fichier de configuration principal du projet Django.
+  - `urls.py`: Définition des URLs de l'application.
+  - `wsgi.py`: Point d'entrée pour les serveurs WSGI (Web Server Gateway Interface).
+
+### Application Ellipse Bikes
+- `ellipse_bikes/`
+  - `cron/`: Scripts de tâches cron pour la gestion de tâches périodiques.
+    - `func.py`: Fonctions utilisées par les tâches cron.
+  - `data/`: Fichiers JSON contenant les données sur les contrats et les stations.
+  - `management/`: Gestion des commandes personnalisées pour Django.
+    - `commands/`: Commandes personnalisées pour la gestion des données.
+  - `migrations/`: Migrations de la base de données.
+  - `static/ellipse_bikes/css/`: Fichiers CSS spécifiques à l'application.
+  - `templates/ellipse_bikes/`: Modèles HTML spécifiques à l'application.
+  - `admin.py`: Configuration de l'interface d'administration.
+  - `apps.py`: Configuration de l'application.
+  - `forms.py`: Définition des formulaires.
+  - `models.py`: Définition des modèles de données.
+  - `tests.py`: Fichiers de tests.
+  - `urls.py`: Définition des URLs de l'application.
+  - `views.py`: Définition des vues de l'application.
+
+### Autres Fichiers et Répertoires
+- `.dockerignore`: Fichiers à ignorer lors de la construction des images Docker.
+- `.env`: Variables d'environnement.
+- `.gitignore`: Fichiers à ignorer lors du suivi avec Git.
+- `Dockerfile`: Instructions pour la construction de l'image Docker.
+- `docker-compose.yml`: Configuration Docker Compose pour le déploiement et l'exécution du projet.
+- `manage.py`: Script de gestion Django.
+- `pyproject.toml`: Configuration du projet Python.
+- `requirements.txt`: Liste des dépendances Python.
+- `setup.cfg`: Configuration du package Python.
+- `setup.py`: Script de configuration du package Python.
+
