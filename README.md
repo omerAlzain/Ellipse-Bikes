@@ -84,11 +84,13 @@ il est facile de trouver le conteneur que vous voulez supprimer. Le nôtre est "
 ### Application Ellipse Bikes
 - `ellipse_bikes/`
   - `cron/`: Scripts de tâches cron pour la gestion de tâches périodiques.
-    - `func.py`: Fonctions utilisées par les tâches cron.
+    - `func.py`: Fonctions utilisées par les tâches cron pour mettre à jour les données des stations.
   - `data/`: Fichiers JSON contenant les données sur les contrats et les stations.
-  - `management/`: Gestion des commandes personnalisées pour Django.
-    - `commands/`: Commandes personnalisées pour la gestion des données.
   - `migrations/`: Migrations de la base de données.
+    - `0002_insert_cities.py`: Script pour insérer les villes dans la base de données.
+    - `0003_insert_contracts.py`: Script pour insérer les contrats dans la base de données.
+    - `0004_insert_stations.py`: Script pour insérer les stations dans la base de données.
+    - `0005_insert_django_q2_schedule.py`: Script pour insérer les tâches planifiées de Django Q2.
   - `static/ellipse_bikes/css/`: Fichiers CSS spécifiques à l'application.
   - `templates/ellipse_bikes/`: Modèles HTML spécifiques à l'application.
   - `admin.py`: Configuration de l'interface d'administration.
